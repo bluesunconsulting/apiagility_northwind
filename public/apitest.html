@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API TEST</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+function loaddata() {
+    $.ajax({
+        url: "/full-employee-data",
+        success: function (data) {
+            $('#dataarea').html(data.total_items);
+            console.log(data);
+        }
+    });
+}
+
+loaddata();
+
+
+</script>
+<body>
+<div id="dataarea"></div>
+</body>
+</html>
